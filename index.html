@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Chinese E-commerce Training - Digital Influencer Programs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #faf9f7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: '👑';
+            font-size: 1.4rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: #faf9f7;
+            padding: 120px 0 80px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeInUp 1s ease;
+            color: #333;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: #666;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+            border: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(233, 30, 99, 0.4);
+        }
+
+        /* About Christine Section */
+        .about-christine {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+            background: #faf9f7;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .product-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .product-price {
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .expand-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        .expand-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .buy-btn {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+        }
+
+        .buy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4);
+        }
+
+        .product-details {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            display: none;
+        }
+
+        .product-details.active {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        /* Product Image Carousel */
+        .product-carousel {
+            position: relative;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #333;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-nav:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .preview-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Modern Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .testimonials-carousel {
+            position: relative;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .testimonial-card {
+            min-width: 100%;
+            padding: 3rem 2rem;
+            background: white;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            color: #667eea;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .testimonial-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            border: 4px solid #667eea;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .testimonial-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #444;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-role {
+            color: #667eea;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .carousel-btn {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+        }
+
+        .carousel-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+        }
+
+        .testimonial-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 0 1rem;
+        }
+
+        .testimonial-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-dot.active {
+            background: #667eea;
+            transform: scale(1.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-6px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            color: #764ba2;
+            border-color: white;
+        }
+
+        .contact-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .close:hover {
+            color: #333;
+        }
+
+        .copy-section {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .copy-text {
+            font-family: monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+            margin-bottom: 1rem;
+        }
+
+        .copy-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                min-width: 300px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .product-card {
+                padding: 1.5rem;
+            }
+
+            .modal-content {
+                margin: 10% auto;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Elite E-commerce Training</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#testimonials">Success Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Social Presence Into Profit</h1>
+            <p>Unlock the secrets of Chinese live streaming e-commerce with proven digital scripts and training materials from elite Alibaba and Taobao veterans. From zero sales to financial freedom through strategic affiliate marketing.</p>
+            <a href="#products" class="cta-button">Get Digital Training Scripts</a>
+        </div>
+    </section>
+
+    <!-- About Team Section -->
+    <section id="about" class="about-christine">
+        <div class="container">
+            <h2 class="section-title">Meet Our Elite E-commerce Team</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/400x500/667eea/ffffff?text=Elite+Team" alt="Elite E-commerce Team">
+                </div>
+                <div class="about-text">
+                    <h3>Chinese E-commerce Pioneers & Alibaba Veterans</h3>
+                    <p>Our team consists of top Chinese influencers and e-commerce experts with combined decades of experience at Alibaba, Taobao, and Tmall. We've mastered the art of Chinese live streaming commerce and converting social media presence into substantial income streams.</p>
+                    <p>Having generated millions in revenue through Chinese e-commerce platforms, our proven methodologies have helped thousands of international creators transition from side hustles to full-time careers, leveraging authentic Chinese live streaming and affiliate marketing strategies.</p>
+                    <p><strong>Our mission:</strong> Share authentic Chinese e-commerce secrets and empower global creators to achieve financial independence using cutting-edge strategies that dominate in China's billion-dollar live streaming market.</p>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">2000+</span>
+                    <span class="stat-label">Students Trained</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">$50M+</span>
+                    <span class="stat-label">Combined Team Revenue</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Years at Alibaba</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Digital Training Scripts & Educational Materials</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Instantly access professional scripts, training materials, and step-by-step guides designed to transform content creators into profitable influencers.</p>
+            
+            <div class="products-grid">
+                <!-- Clothing Category -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <i class="fas fa-tshirt product-icon"></i>
+                        <div class="product-price">$1.99</div>
+                    </div>
+                    <h3 class="product-title">Fashion & Clothing Influencer Scripts</h3>
+                    <p class="product-description">Complete collection of proven scripts and strategies specifically designed for fashion content creators, clothing hauls, and style influencers.</p>
+                    
+                    <ul class="product-features">
+                        <li>20+ Ready-to-use video scripts for clothing reviews</li>
+                        <li>Seasonal fashion content templates</li>
+                        <li>Affiliate link integration strategies</li>
+                        <li>Styling tips and presentation techniques</li>
+                        <li>Call-to-action phrases that convert</li>
+                        <li>Brand partnership outreach templates</li>
+                    </ul>
+                    
+                    <!-- Product Image Carousel -->
+                    <div class="product-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="clothing-carousel-track">
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Fashion+Scripts+Preview" alt="Fashion Scripts Preview">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Live+Streaming+Templates" alt="Live Streaming Templates">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/400x300/ff6b6b/ffffff?text=Content+Calendar" alt="Content Calendar">
+                                </div>
+                            </div>
+                            <button class="carousel-nav carousel-prev" onclick="prevSlide('clothing')">‹</button>
+                            <button class="carousel-nav carousel-next" onclick="nextSlide('clothing')">›</button>
+                            <div class="carousel-indicators">
+                                <div class="carousel-dot active" onclick="goToSlide('clothing', 0)"></div>
+                                <div class="carousel-dot" onclick="goToSlide('clothing', 1)"></div>
+                                <div class="carousel-dot" onclick="goToSlide('clothing', 2)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-details" style="display: block;">
+                        <h4>Complete Training Package Includes:</h4>
+                        <ul>
+                            <li>Video script templates for different clothing categories</li>
+                            <li>Seasonal content calendar with trending hashtags</li>
+                            <li>Conversion-optimized product description formulas</li>
+                            <li>Live streaming clothing haul scripts</li>
+                            <li>Styling challenge content ideas</li>
+                            <li>Brand collaboration pitch templates</li>
+                        </ul>
+                        <p><em>Perfect for fashion bloggers, style influencers, and clothing affiliate marketers looking to increase their conversion rates and revenue.</em></p>
+                    </div>
+
+                    <button class="buy-btn" onclick="openPurchaseModal('Fashion & Clothing Training Guide')">Purchase Now</button>
+                </div>
+
+                <!-- Makeup Category -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <i class="fas fa-palette product-icon"></i>
+                        <div class="product-price">$1.99</div>
+                    </div>
+                    <h3 class="product-title">Beauty & Makeup Influencer Scripts</h3>
+                    <p class="product-description">Comprehensive script collection for beauty content creators, makeup tutorials, and cosmetic product reviewers to maximize engagement and sales.</p>
+                    
+                    <ul class="product-features">
+                        <li>25+ Makeup tutorial script templates</li>
+                        <li>Product review and comparison scripts</li>
+                        <li>Before/after transformation content</li>
+                        <li>Skincare routine presentation guides</li>
+                        <li>Beauty trend content frameworks</li>
+                        <li>Cosmetic affiliate marketing strategies</li>
+                    </ul>
+                    
+                    <!-- Product Image Carousel -->
+                    <div class="product-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="makeup-carousel-track">
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Beauty+Scripts+Preview" alt="Beauty Scripts Preview">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Makeup+Tutorials" alt="Makeup Tutorials">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/400x300/ffd93d/ffffff?text=Skincare+Guides" alt="Skincare Guides">
+                                </div>
+                            </div>
+                            <button class="carousel-nav carousel-prev" onclick="prevSlide('makeup')">‹</button>
+                            <button class="carousel-nav carousel-next" onclick="nextSlide('makeup')">›</button>
+                            <div class="carousel-indicators">
+                                <div class="carousel-dot active" onclick="goToSlide('makeup', 0)"></div>
+                                <div class="carousel-dot" onclick="goToSlide('makeup', 1)"></div>
+                                <div class="carousel-dot" onclick="goToSlide('makeup', 2)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-details" style="display: block;">
+                        <h4>Complete Training Package Includes:</h4>
+                        <ul>
+                            <li>Step-by-step makeup tutorial scripts</li>
+                            <li>Product review templates with conversion hooks</li>
+                            <li>Skincare routine content frameworks</li>
+                            <li>Beauty trend analysis and presentation guides</li>
+                            <li>Get ready with me (GRWM) script variations</li>
+                            <li>Cosmetic brand partnership strategies</li>
+                        </ul>
+                        <p><em>Ideal for beauty influencers, makeup artists, and cosmetic reviewers wanting to create engaging content that drives sales and builds loyal audiences.</em></p>
+                    </div>
+
+                    <button class="buy-btn" onclick="openPurchaseModal('Beauty & Makeup Training Guide')">Purchase Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Success Stories & Transformations</h2>
+            
+            <div class="testimonials-carousel">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100x100/ff6b6b/ffffff?text=SM" alt="Sarah M." class="testimonial-avatar">
+                        <p class="testimonial-text">From 0 to $5K monthly! These Chinese e-commerce strategies completely transformed my Instagram presence. I went from posting randomly to having a strategic content plan that actually converts.</p>
+                        <div class="testimonial-author">Sarah Martinez</div>
+                        <div class="testimonial-role">Fashion Blogger • 45K followers</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100x100/ffd93d/000000?text=JL" alt="Jessica L." class="testimonial-avatar">
+                        <p class="testimonial-text">The live streaming scripts are GOLD! My tutorial engagement increased 300% and I landed my first brand partnership within 2 weeks of implementing these authentic Chinese strategies.</p>
+                        <div class="testimonial-author">Jessica Liu</div>
+                        <div class="testimonial-role">Beauty YouTuber • 28K subscribers</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100x100/667eea/ffffff?text=MT" alt="Maria T." class="testimonial-avatar">
+                        <p class="testimonial-text">I was struggling with my side hustle until I found this elite training from Alibaba veterans. Now I'm making $3K/month consistently with affiliate marketing. This changed my life!</p>
+                        <div class="testimonial-author">Maria Thompson</div>
+                        <div class="testimonial-role">TikTok Creator • 52K followers</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100x100/764ba2/ffffff?text=AK" alt="Amy K." class="testimonial-avatar">
+                        <p class="testimonial-text">From no sales to $8K in my first month! The Chinese e-commerce secrets gave me confidence and structure. I finally know what to say to get people to actually buy through my links.</p>
+                        <div class="testimonial-author">Amy Kim</div>
+                        <div class="testimonial-role">Lifestyle Influencer • 35K followers</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100x100/ff6b6b/ffffff?text=RC" alt="Rachel C." class="testimonial-avatar">
+                        <p class="testimonial-text">The ROI is incredible! For $1.99, I got strategies from real Chinese influencers that helped me quit my 9-5. Now I'm a full-time content creator making 6 figures annually.</p>
+                        <div class="testimonial-author">Rachel Chen</div>
+                        <div class="testimonial-role">Full-time Creator • 89K followers</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-btn" onclick="previousTestimonial()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-indicators">
+                    <div class="testimonial-dot active" onclick="goToTestimonial(0)"></div>
+                    <div class="testimonial-dot" onclick="goToTestimonial(1)"></div>
+                    <div class="testimonial-dot" onclick="goToTestimonial(2)"></div>
+                    <div class="testimonial-dot" onclick="goToTestimonial(3)"></div>
+                    <div class="testimonial-dot" onclick="goToTestimonial(4)"></div>
+                </div>
+                <button class="carousel-btn" onclick="nextTestimonial()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 style="color: white !important; font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center; background: none !important; -webkit-text-fill-color: white !important;">Ready to Transform Your Content?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2.5rem; color: white; opacity: 0.9; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">Have questions about our training materials or need personalized guidance? We're here to help you succeed.</p>
+                <a href="mailto:christineyi12345@gmail.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+                <p style="margin-top: 1.5rem; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-size: 1.1rem; font-weight: 500;">Email: christineyi12345@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePurchaseModal()">&times;</span>
+            <h3>Complete Your Purchase</h3>
+            <p>You're purchasing: <strong id="productName"></strong></p>
+            <p style="font-size: 1.5rem; color: #667eea; font-weight: bold;">Price: $1.99</p>
+            
+            <div style="margin: 2rem 0;">
+                <h4>Payment Instructions:</h4>
+                <ol style="text-align: left; margin-left: 2rem;">
+                    <li>Send $1.99 via e-transfer to: <strong>christineyi12345@gmail.com</strong></li>
+                    <li>Take a screenshot of your payment confirmation</li>
+                    <li>Copy the email template below and send it to us</li>
+                </ol>
+            </div>
+            
+            <div class="copy-section">
+                <h4>Email Template (Click to Copy):</h4>
+                <div class="copy-text" id="emailTemplate">
+                    Subject: Digital Training Purchase - [PRODUCT NAME]
+
+                    Hi Christine,
+
+                    I just paid for the copy: [PRODUCT NAME]. I've attached the payment screenshot as proof of purchase.
+
+                    Please send me the digital training materials immediately.
+
+                    Thank you!
+                </div>
+                <button class="copy-btn" onclick="copyEmailTemplate()">Copy Email Template</button>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <a href="mailto:christineyi12345@gmail.com" class="cta-button" style="text-decoration: none;">
+                    <i class="fas fa-envelope"></i> Send Email Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Product Carousel Functions
+        const carouselStates = {
+            clothing: { currentSlide: 0, totalSlides: 3 },
+            makeup: { currentSlide: 0, totalSlides: 3 }
+        };
+
+        function nextSlide(category) {
+            const state = carouselStates[category];
+            state.currentSlide = (state.currentSlide + 1) % state.totalSlides;
+            updateProductCarousel(category);
+        }
+
+        function prevSlide(category) {
+            const state = carouselStates[category];
+            state.currentSlide = state.currentSlide === 0 ? state.totalSlides - 1 : state.currentSlide - 1;
+            updateProductCarousel(category);
+        }
+
+        function goToSlide(category, slideIndex) {
+            const state = carouselStates[category];
+            state.currentSlide = slideIndex;
+            updateProductCarousel(category);
+        }
+
+        function updateProductCarousel(category) {
+            const track = document.getElementById(category + '-carousel-track');
+            const dots = document.querySelectorAll(`#${category}-carousel-track`).item(0).parentElement.querySelectorAll('.carousel-dot');
+            const state = carouselStates[category];
+            
+            track.style.transform = `translateX(-${state.currentSlide * 100}%)`;
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === state.currentSlide);
+            });
+        }
+
+        // Purchase modal
+        let currentProduct = '';
+
+        function openPurchaseModal(productName) {
+            currentProduct = productName;
+            document.getElementById('productName').textContent = productName;
+            document.getElementById('purchaseModal').style.display = 'block';
+            updateEmailTemplate();
+        }
+
+        function closePurchaseModal() {
+            document.getElementById('purchaseModal').style.display = 'none';
+        }
+
+        function updateEmailTemplate() {
+            const template = `Subject: Digital Training Purchase - ${currentProduct}
+
+Hi Elite E-commerce Team,
+
+I just paid for the copy: ${currentProduct}. I've attached the payment screenshot as proof of purchase.
+
+Please send me the digital training materials immediately.
+
+Thank you!`;
+            document.getElementById('emailTemplate').textContent = template;
+        }
+
+        function copyEmailTemplate() {
+            const template = document.getElementById('emailTemplate').textContent;
+            navigator.clipboard.writeText(template).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = '#28a745';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+
+        // Modern Testimonials Carousel
+        let currentTestimonial = 0;
+        const totalTestimonials = 5;
+
+        function updateTestimonialsCarousel() {
+            const track = document.getElementById('testimonialsTrack');
+            const dots = document.querySelectorAll('.testimonial-dot');
+            
+            track.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentTestimonial);
+            });
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            updateTestimonialsCarousel();
+        }
+
+        function previousTestimonial() {
+            currentTestimonial = currentTestimonial === 0 ? totalTestimonials - 1 : currentTestimonial - 1;
+            updateTestimonialsCarousel();
+        }
+
+        function goToTestimonial(index) {
+            currentTestimonial = index;
+            updateTestimonialsCarousel();
+        }
+
+        // Auto-rotate testimonials
+        setInterval(nextTestimonial, 6000);
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('purchaseModal');
+            if (event.target === modal) {
+                closePurchaseModal();
+            }
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Initialize carousel on load
+        window.addEventListener('load', function() {
+            setTimeout(updateCarousel, 100);
+        });
+
+        // Handle window resize for carousel
+        window.addEventListener('resize', updateCarousel);
+    </script>
+</body>
+</html>
