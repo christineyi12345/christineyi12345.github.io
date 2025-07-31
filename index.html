@@ -271,6 +271,26 @@
             box-shadow: 0 12px 35px rgba(233, 30, 99, 0.4);
         }
 
+        /* Hero Flowchart */
+        .hero-flowchart {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .flowchart-image {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .flowchart-image:hover {
+            transform: scale(1.02);
+        }
+
         /* About Christine Section */
         .about-christine {
             padding: 100px 0;
@@ -648,29 +668,6 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.05);
         }
 
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: 1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 4rem;
-            color: #667eea;
-            opacity: 0.3;
-            font-family: serif;
-        }
-
-        .testimonial-card::after {
-            content: '"';
-            position: absolute;
-            bottom: 1rem;
-            right: 50%;
-            transform: translateX(50%);
-            font-size: 4rem;
-            color: #667eea;
-            opacity: 0.3;
-            font-family: serif;
-        }
 
         .testimonial-avatar {
             width: 100px;
@@ -1046,8 +1043,11 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Transform Your Social Presence Into Profit</h1>
-            <p>Unlock the secrets of live streaming e-commerce with proven digital scripts and training materials from elite industry veterans. Learn from successful trainers who've worked with top Korean, Chinese, and Japanese MCNs to transform beginners into confident content creators worldwide.</p>
-            <a href="#products" class="cta-button">Get Digital Training Scripts</a>
+            <p>Complete a simple form to instantly receive free training materials and join our community for brand collaboration opportunities!</p>
+            <div class="hero-flowchart">
+                <img src="./flowchart.png" alt="Simple 3-step process: Complete Google form, receive training materials, join community for brand collaborations" class="flowchart-image">
+            </div>
+            <a href="#products" class="cta-button">Get Free Scripts + Brand Collabs</a>
         </div>
     </section>
 
@@ -1132,7 +1132,7 @@
     <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">Digital Training Scripts & Educational Materials</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Instantly access professional scripts, training materials, and step-by-step guides designed to transform content creators into profitable influencers.</p>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Get instant FREE access to professional scripts, ready-to-use templates, and step-by-step guides for content creators. Plus, join our network and get contacted directly by merchants with collaboration and brand partnership opportunities!</p>
             
             <div class="products-grid">
                 <!-- Clothing Category -->
@@ -1146,16 +1146,8 @@
                         </div>
                     </div>
                     <h3 class="product-title">Fashion & Clothing Influencer Scripts</h3>
-                    <p class="product-description">Complete collection of proven scripts and strategies specifically designed for fashion content creators, clothing hauls, and style influencers.</p>
+                    <p class="product-description">Complete collection of proven scripts and ready-to-copy templates specifically designed for fashion content creators, clothing hauls, and style influencers. Download instantly + get added to our exclusive list for free clothing collaborations with top merchants!</p>
                     
-                    <ul class="product-features">
-                        <li>20+ Ready-to-use video scripts for clothing reviews</li>
-                        <li>Seasonal fashion content templates</li>
-                        <li>Affiliate link integration strategies</li>
-                        <li>Styling tips and presentation techniques</li>
-                        <li>Call-to-action phrases that convert</li>
-                        <li>Brand partnership outreach templates</li>
-                    </ul>
                     
                     <!-- Product Image Carousel -->
                     <div class="product-carousel">
@@ -1181,20 +1173,8 @@
                         </div>
                     </div>
                     
-                    <div class="product-details" style="display: block;">
-                        <h4>Complete Training Package Includes:</h4>
-                        <ul>
-                            <li>Video script templates for different clothing categories</li>
-                            <li>Seasonal content calendar with trending hashtags</li>
-                            <li>Conversion-optimized product description formulas</li>
-                            <li>Live streaming clothing haul scripts</li>
-                            <li>Styling challenge content ideas</li>
-                            <li>Brand collaboration pitch templates</li>
-                        </ul>
-                        <p><em>Perfect for fashion bloggers, style influencers, and clothing affiliate marketers looking to increase their conversion rates and revenue.</em></p>
-                    </div>
 
-                    <button class="get-free-btn" onclick="openApplicationForm('Fashion & Clothing Training Guide')">Get Free Access Now!</button>
+                    <button class="get-free-btn" onclick="openApplicationForm('Fashion & Clothing Training Guide')">Get Free Scripts + Brand Collabs!</button>
                 </div>
 
                 <!-- Makeup Category -->
@@ -1208,16 +1188,8 @@
                         </div>
                     </div>
                     <h3 class="product-title">Beauty & Makeup Influencer Scripts</h3>
-                    <p class="product-description">Comprehensive script collection for beauty content creators, makeup tutorials, and cosmetic product reviewers to maximize engagement and sales.</p>
+                    <p class="product-description">Comprehensive collection of copy-ready scripts for beauty content creators, makeup tutorials, and cosmetic product reviewers. Download instantly + get connected with beauty brands offering free products for collaborations!</p>
                     
-                    <ul class="product-features">
-                        <li>25+ Makeup tutorial script templates</li>
-                        <li>Product review and comparison scripts</li>
-                        <li>Before/after transformation content</li>
-                        <li>Skincare routine presentation guides</li>
-                        <li>Beauty trend content frameworks</li>
-                        <li>Cosmetic affiliate marketing strategies</li>
-                    </ul>
                     
                     <!-- Product Image Carousel -->
                     <div class="product-carousel">
@@ -1243,20 +1215,8 @@
                         </div>
                     </div>
                     
-                    <div class="product-details" style="display: block;">
-                        <h4>Complete Training Package Includes:</h4>
-                        <ul>
-                            <li>Step-by-step makeup tutorial scripts</li>
-                            <li>Product review templates with conversion hooks</li>
-                            <li>Skincare routine content frameworks</li>
-                            <li>Beauty trend analysis and presentation guides</li>
-                            <li>Get ready with me (GRWM) script variations</li>
-                            <li>Cosmetic brand partnership strategies</li>
-                        </ul>
-                        <p><em>Ideal for beauty influencers, makeup artists, and cosmetic reviewers wanting to create engaging content that drives sales and builds loyal audiences.</em></p>
-                    </div>
 
-                    <button class="get-free-btn" onclick="openApplicationForm('Beauty & Makeup Training Guide')">Get Free Access Now!</button>
+                    <button class="get-free-btn" onclick="openApplicationForm('Beauty & Makeup Training Guide')">Get Free Scripts + Brand Collabs!</button>
                 </div>
             </div>
         </div>
@@ -1270,15 +1230,15 @@
             <div class="testimonials-carousel">
                 <div class="testimonials-track" id="testimonialsTrack">
                     <div class="testimonial-card">
-                        <p class="testimonial-text">These Asian content strategies completely transformed my Instagram presence! I went from posting randomly to having a strategic content plan. My engagement increased and I started getting brand collaboration inquiries within a few months.</p>
+                        <p class="testimonial-text">This training completely transformed my Instagram presence! I went from posting randomly to having a strategic content plan. My engagement increased and I started getting brand collaboration inquiries within a few months.</p>
                         <div class="testimonial-author">Sarah Martinez</div>
                         <div class="testimonial-role">Fashion Blogger • 45K followers</div>
                     </div>
                     
                     <div class="testimonial-card">
-                        <p class="testimonial-text">The live streaming scripts are amazing! My tutorial engagement increased significantly and I landed my first brand partnership within a few months of implementing these proven strategies. Perfect for beginners like me!</p>
+                        <p class="testimonial-text">The training strategies are amazing! My tutorial engagement increased significantly after learning their techniques. I landed my first brand partnership within a few months. Perfect for beginners like me!</p>
                         <div class="testimonial-author">Jessica Liu</div>
-                        <div class="testimonial-role">Beauty YouTuber • 28K subscribers</div>
+                        <div class="testimonial-role">Content Creator • 28K subscribers</div>
                     </div>
                     
                     <div class="testimonial-card">
@@ -1288,13 +1248,13 @@
                     </div>
                     
                     <div class="testimonial-card">
-                        <p class="testimonial-text">The e-commerce strategies gave me confidence and structure. I finally understand how to create authentic content that connects with my audience. My conversion rates have improved steadily over time.</p>
+                        <p class="testimonial-text">The training gave me confidence and structure. I finally learned how to create authentic content that connects with my audience. My conversion rates have improved steadily over time.</p>
                         <div class="testimonial-author">Amy Kim</div>
                         <div class="testimonial-role">Lifestyle Influencer • 35K followers</div>
                     </div>
                     
                     <div class="testimonial-card">
-                        <p class="testimonial-text">The value is incredible! I got amazing strategies from experienced content creators that helped me grow my following organically. The training is beginner-friendly and builds confidence step by step.</p>
+                        <p class="testimonial-text">The value is incredible! I learned amazing strategies from experienced content creators that helped me grow my following organically. The training is beginner-friendly and builds confidence step by step.</p>
                         <div class="testimonial-author">Rachel Chen</div>
                         <div class="testimonial-role">Full-time Creator • 89K followers</div>
                     </div>
@@ -1337,9 +1297,10 @@
     <div id="applicationModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeApplicationModal()">&times;</span>
-            <h3>🎉 Get Free Access - Limited Time Flash Sale!</h3>
-            <p>You're applying for: <strong id="selectedProduct"></strong></p>
-            <p style="font-size: 1.2rem; color: #00c851; font-weight: bold;">Flash Sale Price: <span style="text-decoration: line-through; color: #999;">$10.99</span> → FREE!</p>
+            <h3>🎉 Get Free Scripts + Brand Collaboration Opportunities!</h3>
+            <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 1rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #00c851;">
+                <p style="margin: 0; font-size: 0.95rem; color: #333;"><strong>🎁 BONUS:</strong> By joining, you'll be added to our exclusive merchant network where brands contact YOU directly with free product collaboration offers!</p>
+            </div>
             
             <form id="applicationForm" onsubmit="submitApplication(event)">
                 <div class="form-group">
@@ -1445,7 +1406,6 @@
 
         function openApplicationForm(productName) {
             selectedProduct = productName;
-            document.getElementById('selectedProduct').textContent = productName;
             document.getElementById('applicationModal').style.display = 'block';
         }
 
