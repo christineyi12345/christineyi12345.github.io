@@ -1,4 +1,4 @@
-# Christine Yi - Digital Influencer Training Platform
+# Elite Influencer Community - Digital Training Platform
 
 A premium landing page for digital influencer training programs targeting content creators, fashion vloggers, and beauty influencers. Built with modern web technologies and optimized for conversions.
 
