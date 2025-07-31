@@ -6,6 +6,8 @@ RUN apk add --no-cache wget
 
 # Copy static files
 COPY index.html /usr/share/nginx/html/
+COPY example_video.mov /usr/share/nginx/html/
+COPY girl_influencers_studio.png /usr/share/nginx/html/
 
 # Create a simple health check endpoint
 RUN echo "healthy" > /usr/share/nginx/html/health
@@ -78,6 +80,13 @@ http {
         location ~* \\.(css|js|png|jpg|jpeg|gif|ico|svg)\$ {
             expires 1d;
             add_header Cache-Control "public, no-transform";
+        }
+        
+        # Video files caching and proper headers
+        location ~* \\.(mp4|mov|avi|mkv|webm)\$ {
+            expires 1d;
+            add_header Cache-Control "public, no-transform";
+            add_header Accept-Ranges bytes;
         }
     }
 }

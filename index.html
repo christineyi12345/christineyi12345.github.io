@@ -98,16 +98,118 @@
             width: 100%;
         }
 
+
+        /* Success Showcase Section */
+        .success-showcase {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .showcase-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .showcase-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .showcase-image:hover {
+            transform: scale(1.02);
+        }
+
+        .showcase-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .showcase-text h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+
+        .showcase-text p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .showcase-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .showcase-stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .showcase-stat:hover {
+            transform: translateY(-5px);
+        }
+
+        .showcase-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .showcase-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Small Video Container */
+        .video-container-small {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .video-container-small:hover {
+            transform: scale(1.02);
+        }
+
+        .video-container-small video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* Hero Section */
         .hero {
-            min-height: 90vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             position: relative;
             background: #faf9f7;
-            padding: 120px 0 80px;
+            padding: 80px 0 80px;
         }
 
         .hero-content {
@@ -177,10 +279,9 @@
         }
 
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: center;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .about-image {
@@ -729,6 +830,20 @@
                 display: none;
             }
 
+
+            .showcase-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .showcase-text h3 {
+                font-size: 1.8rem;
+            }
+
+            .showcase-stats {
+                grid-template-columns: 1fr;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -803,14 +918,59 @@
         </div>
     </section>
 
+    <!-- Video Showcase Section -->
+    <section class="success-showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <div class="showcase-text">
+                    <h3>If She Can Do It, You Can Too!</h3>
+                    <p>Watch this successful TikTok influencer in action - see how she effortlessly sells products and connects with her audience. This is exactly the kind of confidence and technique you'll develop with our proven training methods.</p>
+                    <p><strong>What makes her so effective?</strong> She uses the same Chinese live streaming strategies and conversion techniques that we teach in our digital training scripts. Notice her energy, authenticity, and how she naturally guides viewers toward making a purchase.</p>
+                </div>
+                <div class="showcase-image">
+                    <div class="video-container-small">
+                        <video controls preload="metadata">
+                            <source src="./example_video.mov" type="video/quicktime">
+                            <source src="./example_video.mov" type="video/mp4">
+                            <p>Your browser doesn't support HTML video. <a href="./example_video.mov">Download the video</a> instead.</p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Showcase Section -->
+    <section class="success-showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <div class="showcase-image">
+                    <img src="./girl_influencers_studio.png" alt="Successful Fashion Influencers in Studio">
+                </div>
+                <div class="showcase-text">
+                    <h3>Join the Elite Circle of Successful Influencers</h3>
+                    <p>These are real success stories from our training program - fashion and beauty influencers who transformed their passion into profitable businesses. They're living proof that with the right guidance, authentic strategies, and proven scripts, you can build a thriving influencer career.</p>
+                    <p><strong>What makes them successful?</strong> They learned the exact techniques we teach - from Chinese live streaming mastery to conversion-optimized content creation. Now they're earning consistent income doing what they love.</p>
+                    <div class="showcase-stats">
+                        <div class="showcase-stat">
+                            <span class="showcase-stat-number">$15K+</span>
+                            <span class="showcase-stat-label">Monthly Revenue</span>
+                        </div>
+                        <div class="showcase-stat">
+                            <span class="showcase-stat-number">500K+</span>
+                            <span class="showcase-stat-label">Combined Followers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Team Section -->
     <section id="about" class="about-christine">
         <div class="container">
             <h2 class="section-title">Meet Our Elite E-commerce Team</h2>
             <div class="about-content">
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/400x500/667eea/ffffff?text=Elite+Team" alt="Elite E-commerce Team">
-                </div>
                 <div class="about-text">
                     <h3>Chinese E-commerce Pioneers & Alibaba Veterans</h3>
                     <p>Our team consists of top Chinese influencers and e-commerce experts with combined decades of experience at Alibaba, Taobao, and Tmall. We've mastered the art of Chinese live streaming commerce and converting social media presence into substantial income streams.</p>
@@ -969,35 +1129,30 @@
             <div class="testimonials-carousel">
                 <div class="testimonials-track" id="testimonialsTrack">
                     <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/100x100/ff6b6b/ffffff?text=SM" alt="Sarah M." class="testimonial-avatar">
                         <p class="testimonial-text">From 0 to $5K monthly! These Chinese e-commerce strategies completely transformed my Instagram presence. I went from posting randomly to having a strategic content plan that actually converts.</p>
                         <div class="testimonial-author">Sarah Martinez</div>
                         <div class="testimonial-role">Fashion Blogger • 45K followers</div>
                     </div>
                     
                     <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/100x100/ffd93d/000000?text=JL" alt="Jessica L." class="testimonial-avatar">
                         <p class="testimonial-text">The live streaming scripts are GOLD! My tutorial engagement increased 300% and I landed my first brand partnership within 2 weeks of implementing these authentic Chinese strategies.</p>
                         <div class="testimonial-author">Jessica Liu</div>
                         <div class="testimonial-role">Beauty YouTuber • 28K subscribers</div>
                     </div>
                     
                     <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/100x100/667eea/ffffff?text=MT" alt="Maria T." class="testimonial-avatar">
                         <p class="testimonial-text">I was struggling with my side hustle until I found this elite training from Alibaba veterans. Now I'm making $3K/month consistently with affiliate marketing. This changed my life!</p>
                         <div class="testimonial-author">Maria Thompson</div>
                         <div class="testimonial-role">TikTok Creator • 52K followers</div>
                     </div>
                     
                     <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/100x100/764ba2/ffffff?text=AK" alt="Amy K." class="testimonial-avatar">
                         <p class="testimonial-text">From no sales to $8K in my first month! The Chinese e-commerce secrets gave me confidence and structure. I finally know what to say to get people to actually buy through my links.</p>
                         <div class="testimonial-author">Amy Kim</div>
                         <div class="testimonial-role">Lifestyle Influencer • 35K followers</div>
                     </div>
                     
                     <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/100x100/ff6b6b/ffffff?text=RC" alt="Rachel C." class="testimonial-avatar">
                         <p class="testimonial-text">The ROI is incredible! For $1.99, I got strategies from real Chinese influencers that helped me quit my 9-5. Now I'm a full-time content creator making 6 figures annually.</p>
                         <div class="testimonial-author">Rachel Chen</div>
                         <div class="testimonial-role">Full-time Creator • 89K followers</div>
